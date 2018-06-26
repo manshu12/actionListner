@@ -28,7 +28,7 @@ function startGame() {
   pos = 0;
   timerSpan.style.left = pos + '%';
   
-  let count = 4;
+  let count = 5;
   let counter = setInterval(timer, 1000);
   
   function timer() {
@@ -106,7 +106,7 @@ let timerSpan = document.querySelector("#progressBar");
 let pos = 0;
 
 function gameDuration() {
-  let id = setInterval(frame, 10);
+  let id = setInterval(frame, 30);
   function frame() {
     if (pos === 100) {
       clearInterval(id);
@@ -135,7 +135,7 @@ function submitWord() {
         scoreSpan.innerHTML = score; 
         display.innerHTML = words[i];
         answer.value = '';
-        console.log('true');
+        consolehlog('true');
         return score;
       } else {
         console.log('false');
@@ -144,4 +144,3 @@ function submitWord() {
     return answer;
   })
   return answer;
-}
